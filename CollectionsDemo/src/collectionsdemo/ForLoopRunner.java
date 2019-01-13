@@ -8,7 +8,8 @@ package collectionsdemo;
 import java.util.List;
 
 /**
- *
+ * This runner method will traverse through List
+ * by using plain for loop.
  * @author Drazen
  */
 public class ForLoopRunner extends AbstractBenchmarkedRunner {
@@ -16,7 +17,6 @@ public class ForLoopRunner extends AbstractBenchmarkedRunner {
     public ForLoopRunner() {
         super("For Loop");
     }
-    
 
     @Override
     protected int solve(List<Integer> myList) {

@@ -8,7 +8,8 @@ package collectionsdemo;
 import java.util.List;
 
 /**
- *
+ * This runner method will traverse through List
+ * by using streaming and lambda expressions
  * @author Drazen
  */
 public class SerialRunner extends AbstractBenchmarkedRunner {

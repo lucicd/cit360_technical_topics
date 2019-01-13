@@ -8,7 +8,9 @@ package collectionsdemo;
 import java.util.List;
 
 /**
- *
+ * This runner method will traverse through List
+ * by using for-each loop.
+ * 
  * @author Drazen
  */
 public class ForEachLoopRunner extends AbstractBenchmarkedRunner {

@@ -8,7 +8,9 @@ package collectionsdemo;
 import java.util.List;
 
 /**
- *
+ * This runner method will traverse through List
+ * by using parallel streaming and lambda expressions.
+ * 
  * @author Drazen
  */
 public class ParallelRunner extends AbstractBenchmarkedRunner {

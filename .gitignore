@@ -25,3 +25,6 @@ hs_err_pid*
 /HelloWorld/target/
 /CollectionsDemo/nbproject/private/
 /CollectionsDemo/build/
+/CountingHapaxes/nbproject/private/
+/CountingHapaxes/build/
+/CountingHapaxes/dist/
