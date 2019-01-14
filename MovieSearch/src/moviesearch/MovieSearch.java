@@ -10,6 +10,7 @@ import java.io.FileInputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 import java.util.Set;
@@ -27,8 +28,8 @@ public class MovieSearch {
      * @param genresStr
      * @return array list of genres
      */
-    private static ArrayList<String> buildGenres(String genresStr) {
-        ArrayList<String> genres;
+    private static List<String> buildGenres(String genresStr) {
+        List<String> genres;
         try (Scanner myScanner = new Scanner(genresStr).useDelimiter(",")) {
             genres = new ArrayList<>();
             while (myScanner.hasNext()) {
@@ -78,11 +79,11 @@ public class MovieSearch {
      * @return the list of movies
      * @throws ReadMoviesException
      */
-    private static ArrayList<Movie> readMovies(String fileName)
+    private static List<Movie> readMovies(String fileName)
             throws ReadMoviesException {
         try (FileInputStream fips = new FileInputStream(fileName);
                 Scanner input = new Scanner(fips)) {
-            ArrayList<Movie> movies = new ArrayList<>();
+            List<Movie> movies = new ArrayList<>();
             while (input.hasNextLine()) {
                 String line = input.nextLine();
                 Movie movie = buildMovieObject(line);
@@ -114,15 +115,15 @@ public class MovieSearch {
         return keywords;
     }
 
-    private static Map<String, ArrayList<Movie>> buildKeywords(ArrayList<Movie> movies) {
-        Map<String, ArrayList<Movie>> keywords = new TreeMap<>();
+    private static Map<String, List<Movie>> buildKeywords(List<Movie> movies) {
+        Map<String, List<Movie>> keywords = new TreeMap<>();
         for (Movie movie : movies) {
             Set<String> movieKeywords = extractKeywords(movie);
             for (String keyword : movieKeywords) {
                 if (!keywords.containsKey(keyword)) {
                     keywords.put(keyword, new ArrayList<>());
                 }
-                ArrayList<Movie> existingMovies = keywords.get(keyword);
+                List<Movie> existingMovies = keywords.get(keyword);
                 existingMovies.add(movie);
             }
         }
@@ -135,8 +136,8 @@ public class MovieSearch {
      * @param keyword
      * @return the list of found movies
      */
-    private static ArrayList<Movie> findMovies(
-            Map<String, ArrayList<Movie>> keywords, String keyword) {
+    private static List<Movie> findMovies(
+            Map<String, List<Movie>> keywords, String keyword) {
         return keywords.get(keyword);
     }
     
@@ -144,7 +145,7 @@ public class MovieSearch {
      * Simple method to show movies on the screen.
      * @param movies 
      */
-    private static void showMovies(ArrayList<Movie> movies) {
+    private static void showMovies(List<Movie> movies) {
         movies.stream().forEach((Movie movie) -> {
             System.out.println(movie);
         });
@@ -155,9 +156,9 @@ public class MovieSearch {
      */
     public static void main(String[] args) {
         try {
-            ArrayList<Movie> movies = readMovies("movies.txt");
-            Map<String, ArrayList<Movie>> keywords = buildKeywords(movies);
-            ArrayList<Movie> foundMovies = findMovies(keywords, "Fireman");
+            List<Movie> movies = readMovies("movies.txt");
+            Map<String, List<Movie>> keywords = buildKeywords(movies);
+            List<Movie> foundMovies = findMovies(keywords, "Fireman");
             showMovies(foundMovies);
         } catch (Exception e) {
             System.err.println(e.getMessage());

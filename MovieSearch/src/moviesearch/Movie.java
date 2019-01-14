@@ -5,7 +5,7 @@
  */
 package moviesearch;
 
-import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Keeps data about movies
@@ -186,14 +186,14 @@ public class Movie {
     }
 
     // genres (string array) – includes up to three genres associated with the movie
-    private ArrayList<String> genres;
+    private List<String> genres;
 
     /**
      * Get the value of genres
      *
      * @return the value of genres
      */
-    public ArrayList<String> getGenres() {
+    public List<String> getGenres() {
         return genres;
     }
 
@@ -202,7 +202,7 @@ public class Movie {
      *
      * @param genres new value of genres
      */
-    public void setGenres(ArrayList<String> genres) {
+    public void setGenres(List<String> genres) {
         this.genres = genres;
     }
 
