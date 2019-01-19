@@ -32,3 +32,6 @@ hs_err_pid*
 /MovieSearch/build/
 /GoodsDispenser/nbproject/private/
 /GoodsDispenser/build/
+/ApplicationControllerDemo/nbproject/private/
+/ApplicationControllerDemo/dist/
+/ApplicationControllerDemo/build/
