@@ -35,3 +35,6 @@ hs_err_pid*
 /ApplicationControllerDemo/nbproject/private/
 /ApplicationControllerDemo/dist/
 /ApplicationControllerDemo/build/
+/Experiments/nbproject/private/
+/Experiments/build/
+/Experiments/dist/
