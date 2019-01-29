@@ -12,17 +12,21 @@ import java.util.Map;
  *
  * @author Drazen
  */
-public class Controller {
+public class Controller 
+{
     private final Map<String,IHandler> handlerMap = new HashMap();
 
-    public void handleRequest(String command, Map<String,Object> data){
+    public void handleRequest(String command, Map<String, Object> data)
+    {
         IHandler aCommandHandler = handlerMap.get(command);
-        if (aCommandHandler != null){
+        if (aCommandHandler != null)
+        {
             aCommandHandler.handleIt(this, data);
         }
     }
 
-    public void mapCommand(String aCommand, IHandler acHandler){
+    public void mapCommand(String aCommand, IHandler acHandler)
+    {
         handlerMap.put(aCommand,acHandler);
     }
 }
