@@ -1,0 +1,200 @@
+Dimension: 708, Threads: 1
+
+Total execution time 1: 704ms
+Number of operations: 709,288,560
+Performance: 1.01 GFLOPS
+
+Total execution time 2: 763ms
+Number of operations: 709,288,560
+Performance: 0.93 GFLOPS
+
+Dimension: 708, Threads: 2
+
+Total execution time 1: 469ms
+Number of operations: 709,288,560
+Performance: 1.51 GFLOPS
+
+Total execution time 2: 470ms
+Number of operations: 709,288,560
+Performance: 1.51 GFLOPS
+
+Dimension: 708, Threads: 3
+
+Total execution time 1: 359ms
+Number of operations: 709,288,560
+Performance: 1.98 GFLOPS
+
+Total execution time 2: 361ms
+Number of operations: 709,288,560
+Performance: 1.96 GFLOPS
+
+Dimension: 708, Threads: 4
+
+Total execution time 1: 359ms
+Number of operations: 709,288,560
+Performance: 1.98 GFLOPS
+
+Total execution time 2: 360ms
+Number of operations: 709,288,560
+Performance: 1.97 GFLOPS
+
+Dimension: 708, Threads: 5
+
+Total execution time 1: 438ms
+Number of operations: 709,288,560
+Performance: 1.62 GFLOPS
+
+Total execution time 2: 454ms
+Number of operations: 709,288,560
+Performance: 1.56 GFLOPS
+
+Dimension: 708, Threads: 6
+
+Total execution time 1: 406ms
+Number of operations: 709,288,560
+Performance: 1.75 GFLOPS
+
+Total execution time 2: 418ms
+Number of operations: 709,288,560
+Performance: 1.70 GFLOPS
+
+Dimension: 708, Threads: 7
+
+Total execution time 1: 422ms
+Number of operations: 709,288,560
+Performance: 1.68 GFLOPS
+
+Total execution time 2: 470ms
+Number of operations: 709,288,560
+Performance: 1.51 GFLOPS
+
+Dimension: 708, Threads: 8
+
+Total execution time 1: 453ms
+Number of operations: 709,288,560
+Performance: 1.57 GFLOPS
+
+Total execution time 2: 437ms
+Number of operations: 709,288,560
+Performance: 1.62 GFLOPS
+
+Dimension: 708, Threads: 9
+
+Total execution time 1: 437ms
+Number of operations: 709,288,560
+Performance: 1.62 GFLOPS
+
+Total execution time 2: 470ms
+Number of operations: 709,288,560
+Performance: 1.51 GFLOPS
+
+Dimension: 708, Threads: 10
+
+Total execution time 1: 564ms
+Number of operations: 709,288,560
+Performance: 1.26 GFLOPS
+
+Total execution time 2: 421ms
+Number of operations: 709,288,560
+Performance: 1.68 GFLOPS
+
+Dimension: 708, Threads: 11
+
+Total execution time 1: 559ms
+Number of operations: 709,288,560
+Performance: 1.27 GFLOPS
+
+Total execution time 2: 437ms
+Number of operations: 709,288,560
+Performance: 1.62 GFLOPS
+
+Dimension: 708, Threads: 12
+
+Total execution time 1: 597ms
+Number of operations: 709,288,560
+Performance: 1.19 GFLOPS
+
+Total execution time 2: 421ms
+Number of operations: 709,288,560
+Performance: 1.68 GFLOPS
+
+Dimension: 708, Threads: 13
+
+Total execution time 1: 532ms
+Number of operations: 709,288,560
+Performance: 1.33 GFLOPS
+
+Total execution time 2: 438ms
+Number of operations: 709,288,560
+Performance: 1.62 GFLOPS
+
+Dimension: 708, Threads: 14
+
+Total execution time 1: 578ms
+Number of operations: 709,288,560
+Performance: 1.23 GFLOPS
+
+Total execution time 2: 423ms
+Number of operations: 709,288,560
+Performance: 1.68 GFLOPS
+
+Dimension: 708, Threads: 15
+
+Total execution time 1: 546ms
+Number of operations: 709,288,560
+Performance: 1.30 GFLOPS
+
+Total execution time 2: 432ms
+Number of operations: 709,288,560
+Performance: 1.64 GFLOPS
+
+Dimension: 708, Threads: 16
+
+Total execution time 1: 532ms
+Number of operations: 709,288,560
+Performance: 1.33 GFLOPS
+
+Total execution time 2: 468ms
+Number of operations: 709,288,560
+Performance: 1.52 GFLOPS
+
+Dimension: 708, Threads: 17
+
+Total execution time 1: 549ms
+Number of operations: 709,288,560
+Performance: 1.29 GFLOPS
+
+Total execution time 2: 515ms
+Number of operations: 709,288,560
+Performance: 1.38 GFLOPS
+
+Dimension: 708, Threads: 18
+
+Total execution time 1: 563ms
+Number of operations: 709,288,560
+Performance: 1.26 GFLOPS
+
+Total execution time 2: 517ms
+Number of operations: 709,288,560
+Performance: 1.37 GFLOPS
+
+Dimension: 708, Threads: 19
+
+Total execution time 1: 547ms
+Number of operations: 709,288,560
+Performance: 1.30 GFLOPS
+
+Total execution time 2: 515ms
+Number of operations: 709,288,560
+Performance: 1.38 GFLOPS
+
+Dimension: 708, Threads: 20
+
+Total execution time 1: 547ms
+Number of operations: 709,288,560
+Performance: 1.30 GFLOPS
+
+Total execution time 2: 519ms
+Number of operations: 709,288,560
+Performance: 1.37 GFLOPS
+
