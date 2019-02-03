@@ -1,12 +1,12 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Technical topics for CIT360
  */
 package threadingdemo;
 
 /**
- *
+ * CalcOneElement class implements Runnable interface. 
+ * The run method calculates one element of the result matrix by 
+ * dot multiplying row vector from matrix A with a column vector from matrix B.
  * @author Drazen
  */
 public class CalcOneElement implements Runnable {

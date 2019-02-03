@@ -1,7 +1,5 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Technical topics for CIT360
  */
 package controller;
 
@@ -64,6 +62,8 @@ public class CalculateBudgetHandler implements IHandler {
         budget.setBudgetedDiff(0);
     }
 
+    // Computes various elements of the monthly budget
+    // and sets the next view
     @Override
     public Response handleIt(Map<String, Object> data) {
         this.budget = (MonthlyBudget) data.get("budget");

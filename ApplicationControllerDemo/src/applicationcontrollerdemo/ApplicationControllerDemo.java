@@ -1,7 +1,7 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Technical topics for CIT360
+ * Demo project to calculate monthly budget. 
+ * Uses application controller patttern
  */
 package applicationcontrollerdemo;
 
@@ -14,6 +14,9 @@ import view.Router;
  */
 public class ApplicationControllerDemo {
 
+    /**
+     * Holds a reference to the application controller object
+     */
     public static final ApplicationController CONTROLLER = 
             new ApplicationController();
     

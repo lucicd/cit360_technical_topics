@@ -11,7 +11,12 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 /**
- *
+ * MatrixCalculator class contains multiply method. This method creates an 
+ * ExecutorService object, which handles the pool of threads. 
+ * Furthermore, the method creates a worker, an instance of the CalcOneElement 
+ * class, for every element of the result matrix. The worker is then passed 
+ * to the executor. Finally, a while loop is waiting for all workers to 
+ * complete their job.
  * @author Drazen
  */
 public class MatrixCalculator {
@@ -24,7 +29,13 @@ public class MatrixCalculator {
                 executor.execute(worker);
             }
         }
+        // The shutdown() method doesn’t cause an immediate destruction of 
+        // the ExecutorService. It will make the ExecutorService stop accepting
+        // new tasks and shut down after all running threads finish 
+        // their current work.
         executor.shutdown();
+        
+        // Waits for all taks to complete after shutdown
         while (!executor.isTerminated()) {
         }
         return matrixP;

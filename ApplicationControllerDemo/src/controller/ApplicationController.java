@@ -1,7 +1,5 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Technical topics for CIT360
  */
 package controller;
 
@@ -11,12 +9,18 @@ import pojos.Request;
 import pojos.Response;
 
 /**
- *
+ * Contains a standard implementation of the Application Controller pattern.
+ * The only changes I made from the book version are this: 
+ *    (1) mapCommand method is private, 
+ *    (2) handlers are added in the constructor of the controller,  
+ *    (3) handleRequest method accepts objects of the Request class as an input, and 
+ *    (4) handleRequesat methods returns objects of the Response class. I wanted to mimic the way web applications work.
  * @author Drazen
  */
 public class ApplicationController {
     private final Map<String, IHandler> handlers;
 
+    // All handlers are created in the constructor.
     public ApplicationController() {
         handlers = new HashMap<>();
         mapCommand("inputBudgetData", new InputDataHandler());
