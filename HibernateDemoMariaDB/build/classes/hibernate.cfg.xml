@@ -41,20 +41,18 @@ Contributor(s):
 -->
 <hibernate-configuration>
   <session-factory>
-    <property name="hibernate.connection.driver_class">org.apache.derby.jdbc.ClientDriver</property>
-    <property name="hibernate.connection.url">jdbc:derby://localhost:1527/cit360-demo</property>
-    <property name="hibernate.connection.username">drazen</property>
-    <property name="hibernate.connection.password">secret</property>
+    <property name="hibernate.connection.driver_class">org.mariadb.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mariadb://localhost:3306/cit360_demo</property>
+    <property name="hibernate.connection.username">root</property>
+    <property name="hibernate.connection.password"/>
     <property name="hibernate.connection.pool_size">1</property>
-    <property name="hibernate.dialect">org.hibernate.dialect.DerbyTenSevenDialect</property>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
     <!-- Enable Hibernate's automatic session context management -->
     <property name="hibernate.current_session_context_class">thread</property>
     <!-- Disable the seconf-level cache -->
-    <property name="hibernate.cache.provider_class">
-        org.hibernate.cache.internal.NoCacheProvider
-    </property>
+    <property name="hibernate.cache.provider_class">org.hibernate.cache.internal.NoCacheProvider</property>
     <!-- Echo all executed SQL to stdout -->
     <property name="hibernate.show_sql">true</property>
-    <mapping class="hibernatedemo.Customer" package="hibernatedemo"/>
+    <mapping class="hibernatedemomariadb.Person" package="hibernatedemomariadb"/>
   </session-factory>
 </hibernate-configuration>
