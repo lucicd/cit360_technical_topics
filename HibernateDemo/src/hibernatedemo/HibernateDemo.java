@@ -1,21 +1,19 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package hibernatedemo;
 
-/**
- *
- * @author Drazen
- */
-public class HibernateDemo {
+import java.util.List;
 
-    /**
-     * @param args the command line arguments
-     */
+public class HibernateDemo {
+    
+
     public static void main(String[] args) {
-        // TODO code application logic here
+        TestDAO t = TestDAO.getInstance();
+        List<Customer> customers = t.getCustomers();
+        for (Customer customer: customers)
+        {
+            System.out.println(customer);
+        }
+        
+        System.out.println(t.getCustomer(1));
     }
     
 }
