@@ -50,3 +50,6 @@ hs_err_pid*
 /HibernateDemo/build/
 /HibernateDemo/dist/
 /HibernateDemoMariaDB/dist/
+/PersonsDemo/nbproject/private/
+/PersonsDemo/build/
+/PersonsDemo/dist/
