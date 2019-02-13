@@ -15,9 +15,10 @@ public class ThreadingDemo {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        int dimension = Integer.parseInt(args[0]);
-        int threads = Integer.parseInt(args[1]);
-        test(dimension, threads);
+//        int dimension = Integer.parseInt(args[0]);
+//        int threads = Integer.parseInt(args[1]);
+//        test(dimension, threads);
+        test(1000, 1);
     }
     
     private static void reportPerformance(int pass, 

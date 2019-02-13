@@ -61,3 +61,7 @@ hs_err_pid*
 /ProductsDemo/dist/
 /QCJSONDemo/nbproject/private/
 /QCJSONDemo/build/
+/JacksonDemo/nbproject/private/
+/JacksonDemo/dist/
+/JacksonDemo/build/
+/QCJSONDemo/dist/
