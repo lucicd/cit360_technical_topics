@@ -65,3 +65,6 @@ hs_err_pid*
 /JacksonDemo/dist/
 /JacksonDemo/build/
 /QCJSONDemo/dist/
+/ServletsDemo/nbproject/private/
+/ServletsDemo/build/
+/ServletsDemo/target/
