@@ -69,3 +69,6 @@ hs_err_pid*
 /ServletsDemo/build/
 /ServletsDemo/target/
 /HttpURLDemo/target/
+/CustomersApp/nbproject/private/
+/CustomersApp/target/
+/CustomersApp/nbproject/
