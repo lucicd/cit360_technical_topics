@@ -4,9 +4,7 @@ import cit360.drazen.exceptions.ModelException;
 import java.util.List;
 import static org.assertj.core.api.Assertions.*;
 import org.junit.After;
-import org.junit.AfterClass;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 
 public class CustomerDAOTest {
@@ -14,18 +12,7 @@ public class CustomerDAOTest {
     private static final Customer VALERIE = new Customer();
     private static final Customer WILLIAM = new Customer();
     private static final Customer MARY = new Customer();
-    
-    public CustomerDAOTest() {
-    }
-    
-    @BeforeClass
-    public static void setUpClass() {
-    }
-    
-    @AfterClass
-    public static void tearDownClass() {
-    }
-    
+        
     @Before
     public void setUp() {
         VALERIE.setFirstName("Valerie");
@@ -103,71 +90,6 @@ public class CustomerDAOTest {
             fail("Exception expected.");
         } catch (ModelException ex) {
             assertThat(ex.getMessage()).contains("customer");
-        }
-    }
-    
-    @Test
-    public void testaddCustomer_BadAttributes_FirstName() {
-        System.out.println("addCustomer_BadAttributes_FirstName");
-        try {
-            CustomerDAO dao = CustomerDAO.getInstance();
-            MARY.setFirstName(null);
-            dao.addCustomer(MARY);
-            fail("Exception expected.");
-        } catch (ModelException ex) {
-            assertThat(ex.getMessage()).contains("firstName");
-        }
-    }
-    
-    @Test
-    public void testaddCustomer_BadAttributes_LastName() {
-        System.out.println("addCustomer_BadAttributes_LastName");
-        try {
-            CustomerDAO dao = CustomerDAO.getInstance();
-            MARY.setLastName(" ");
-            dao.addCustomer(MARY);
-            fail("Exception expected.");
-        } catch (ModelException ex) {
-            assertThat(ex.getMessage()).contains("lastName");
-        }
-    }
-    
-    @Test
-    public void testaddCustomer_BadAttributes_Email() {
-        System.out.println("testaddCustomer_BadAttributes_Email");
-        try {
-            CustomerDAO dao = CustomerDAO.getInstance();
-            MARY.setEmail(" ");
-            dao.addCustomer(MARY);
-            fail("Exception expected.");
-        } catch (ModelException ex) {
-            assertThat(ex.getMessage()).contains("email");
-        }
-    }
-    
-    @Test
-    public void testaddCustomer_BadAttributes_Mobile() {
-        System.out.println("testaddCustomer_BadAttributes_Mobile");
-        try {
-            CustomerDAO dao = CustomerDAO.getInstance();
-            MARY.setMobile(null);
-            dao.addCustomer(MARY);
-            fail("Exception expected.");
-        } catch (ModelException ex) {
-            assertThat(ex.getMessage()).contains("mobile");
-        }
-    }
-    
-    @Test
-    public void testaddCustomer_BadAttributes_StateCode() {
-        System.out.println("testaddCustomer_BadAttributes_StateCode");
-        try {
-            CustomerDAO dao = CustomerDAO.getInstance();
-            MARY.setStateCode("tolong");
-            dao.addCustomer(MARY);
-            fail("Exception expected.");
-        } catch (ModelException ex) {
-            assertThat(ex.getMessage()).contains("stateCode");
         }
     }
     

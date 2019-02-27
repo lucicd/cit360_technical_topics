@@ -20,7 +20,7 @@ public class CustomerController
     
     private CustomerController()
     {
-        mapCommand("getcustomers", new GetCustomersHandler());
+        mapCommand("list", new GetCustomersHandler());
     }
     
     public static CustomerController getInstance()
@@ -34,11 +34,13 @@ public class CustomerController
 
     public void handleRequest(String command, Map<String, Object> data)
     {
-        Handler aCommandHandler = handlerMap.get(command);
-        if (aCommandHandler != null)
+        Handler aCommandHandler = 
+                handlerMap.get(command == null ? "list" : command);
+        if (aCommandHandler == null)
         {
-            aCommandHandler.handleIt(data);
-        }
+            aCommandHandler = new UnknownCommandHandler();
+        } 
+        aCommandHandler.handleIt(data);
     }
 
     private void mapCommand(String aCommand, Handler acHandler)
