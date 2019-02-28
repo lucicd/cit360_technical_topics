@@ -1,7 +1,6 @@
 package cit360.drazen.model;
 
 import cit360.drazen.exceptions.ModelException;
-import java.sql.PreparedStatement;
 import java.util.List;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;

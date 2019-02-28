@@ -21,6 +21,8 @@ public class CustomerController
     private CustomerController()
     {
         mapCommand("list", new GetCustomersHandler());
+        mapCommand("create", new CreateCustomerHandler());
+        mapCommand("edit", new EditCustomerHandler());
     }
     
     public static CustomerController getInstance()
