@@ -2,13 +2,13 @@ package cit360.drazen.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.Map;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class UnknownCommandHandler implements Handler {
+public class UnknownActionHandler implements Handler {
     @Override
-    public void handleIt(Map<String, Object> data) {
-        HttpServletResponse response = (HttpServletResponse)data.get("response");
+    public void handleIt(HttpServletRequest request, 
+            HttpServletResponse response) {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             out.println("<!DOCTYPE html>");

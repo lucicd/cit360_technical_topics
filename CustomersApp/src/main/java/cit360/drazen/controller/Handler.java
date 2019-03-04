@@ -1,7 +1,8 @@
 package cit360.drazen.controller;
 
-import java.util.Map;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 public interface Handler {
-    public void handleIt(Map<String, Object> data);;
+    public void handleIt(HttpServletRequest request, HttpServletResponse response);
 }

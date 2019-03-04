@@ -2,7 +2,6 @@ package cit360.drazen.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
@@ -13,9 +12,8 @@ import javax.servlet.http.HttpServletResponse;
 public class CreateCustomerHandler implements Handler {
 
     @Override
-    public void handleIt(Map<String, Object> data) {
-        HttpServletRequest request = (HttpServletRequest) data.get("request");
-        HttpServletResponse response = (HttpServletResponse)data.get("response");
+    public void handleIt(HttpServletRequest request,
+            HttpServletResponse response) {
         try {
             RequestDispatcher dispatcher = request.getRequestDispatcher(
                     "/WEB-INF/customers/create.jsp");

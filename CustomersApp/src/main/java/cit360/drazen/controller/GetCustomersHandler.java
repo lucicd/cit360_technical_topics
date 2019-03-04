@@ -5,7 +5,6 @@ import cit360.drazen.model.Customer;
 import cit360.drazen.model.CustomerDAO;
 import java.io.IOException;
 import java.util.List;
-import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
@@ -16,11 +15,9 @@ import javax.servlet.http.HttpServletResponse;
 public class GetCustomersHandler implements Handler {
     
     @Override
-    public void handleIt(Map<String, Object> data) {
+    public void handleIt(HttpServletRequest request, 
+            HttpServletResponse response) {
         try {
-            HttpServletRequest request = (HttpServletRequest)data.get("request");
-            HttpServletResponse response = (HttpServletResponse)data.get("response");
-
             CustomerDAO dao = CustomerDAO.getInstance();
             List<Customer> customers = dao.getCustomers();
             request.setAttribute("customers", customers);

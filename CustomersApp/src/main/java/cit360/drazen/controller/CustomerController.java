@@ -1,17 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package cit360.drazen.controller;
 
 import java.util.HashMap;
 import java.util.Map;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
-/**
- *
- * @author Drazen
- */
 public class CustomerController 
 {
     private final Map<String,Handler> handlerMap = new HashMap();
@@ -20,9 +13,9 @@ public class CustomerController
     
     private CustomerController()
     {
-        mapCommand("list", new GetCustomersHandler());
-        mapCommand("create", new CreateCustomerHandler());
-        mapCommand("edit", new EditCustomerHandler());
+        mapAction("list", new GetCustomersHandler());
+        mapAction("create", new CreateCustomerHandler());
+        mapAction("edit", new EditCustomerHandler());
     }
     
     public static CustomerController getInstance()
@@ -34,19 +27,20 @@ public class CustomerController
         return singleInstance;
     }
 
-    public void handleRequest(String command, Map<String, Object> data)
+    public void handleRequest(String action, 
+            HttpServletRequest request, HttpServletResponse response)
     {
-        Handler aCommandHandler = 
-                handlerMap.get(command == null ? "list" : command);
-        if (aCommandHandler == null)
+        Handler actionHandler = 
+                handlerMap.get(action == null ? "list" : action);
+        if (actionHandler == null)
         {
-            aCommandHandler = new UnknownCommandHandler();
+            actionHandler = new UnknownActionHandler();
         } 
-        aCommandHandler.handleIt(data);
+        actionHandler.handleIt(request, response);
     }
 
-    private void mapCommand(String aCommand, Handler acHandler)
+    private void mapAction(String action, Handler handler)
     {
-        handlerMap.put(aCommand, acHandler);
+        handlerMap.put(action, handler);
     }
 }
