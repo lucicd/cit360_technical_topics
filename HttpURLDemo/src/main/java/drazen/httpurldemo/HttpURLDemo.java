@@ -18,9 +18,10 @@ import org.json.simple.parser.ParseException;
 public class HttpURLDemo {
     public static void main(String[] args)
     {
+        String json = WeatherQuery.getForecast("IL", "Chicago");
+        if (json.length() == 0)
+            return;
         try {
-            String json = WeatherQuery.getForecast("IL", "Chicago");
-            System.out.println(json);
             JSONParser parser = new JSONParser();
             JSONObject forecast = (JSONObject)parser.parse(json);
             JSONObject currentObservation = (JSONObject)forecast.get("current_observation");
@@ -36,7 +37,7 @@ public class HttpURLDemo {
             System.out.println("Wind Direction: " + currentObservation.get("wind_dir"));
             System.out.println("Relative Humidity: " + currentObservation.get("relative_humidity"));
             System.out.println("Pressure [mb]: " + currentObservation.get("pressure_mb"));
-        } catch (IOException | ParseException ex) {
+        } catch (ParseException ex) {
             System.err.println(ex.getMessage());
         }
     }
