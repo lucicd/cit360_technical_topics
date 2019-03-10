@@ -16,6 +16,7 @@ public class CustomerController
         mapAction("list", new GetCustomersHandler());
         mapAction("create", new CreateCustomerHandler());
         mapAction("edit", new EditCustomerHandler());
+        mapAction("insert", new InsertCustomerHandler());
     }
     
     public static CustomerController getInstance()

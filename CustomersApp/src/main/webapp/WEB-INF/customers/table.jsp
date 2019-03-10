@@ -5,9 +5,8 @@
     List<Customer> customers = (ArrayList<Customer>) request.getAttribute("customers");
     if (customers.size() > 0) {
 %>
-<table class="table table-striped table-bordered table-hover">
-    <caption>Customers</caption>
-    <thead class="thead-dark">
+<table>
+    <thead>
         <tr>
             <th>First Name</th>
             <th>Last Name</th>
@@ -36,14 +35,9 @@
             <td><%= customer.getStateCode()%></td>
             <td><%= customer.getZipCode()%></td>
             <td>
-                <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
-                    <a href="/CustomersApp/customers?action=edit&id=<%= customer.getId()%>"
-                       class="btn btn-secondary">Edit</a>
-                    <a href="/CustomersApp/customers?action=details&id=<%= customer.getId()%>" 
-                       class="btn btn-secondary">Details</a>
-                    <a href="/CustomersApp/customers?action=delete&id=<%= customer.getId()%>" 
-                       class="btn btn-warning">Delete</a>
-                </div>
+                <a href="/CustomersApp/customers?action=edit&id=<%= customer.getId()%>">Edit</a>
+                <a href="/CustomersApp/customers?action=details&id=<%= customer.getId()%>">Details</a>
+                <a href="/CustomersApp/customers?action=delete&id=<%= customer.getId()%>">Delete</a>
             </td>
         </tr>
         <%
